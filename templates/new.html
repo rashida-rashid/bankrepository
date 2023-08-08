@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+<h2>Welcome to ABC Bank</h2>
+<p>Please fill this form</p>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <a href="{% url 'bank:form_view' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Form</a>
+</form>
+{% endblock %}

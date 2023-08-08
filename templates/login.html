@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="POST" class="p-3 shadow">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                 <div class="form-group">
+                    <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password">
+                </div>
+                <div>
+                   <input type="submit" class="btn btn-success" href="new.html"><br>
+                   <a class="reg-link" href="{% url 'bank:register' %}">Register</a>
+                </div>
+                <div>
+                {% for msg in messages %}
+                    <h2>{{msg}}</h2>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+
+.navbar{
+
+  color:SteelBlue;
+}
+.nav-link{
+     letter-spacing : .2em;
+     font-size : 20px;
+     text-transform : uppercase;
+}
+	h1{
+		font-size: 40px;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-put;
+		font-weight: 200;
+	}
+.navbar-nav {
+    flex-direction: row;
+
+      .dropdown-menu {
+          position: absolute;
+      }
+      .nav-link {
+          padding-right: $navbar-nav-link-padding-x;
+          padding-left: $navbar-nav-link-padding-x;
+      }
+    }
+
+    .navbar-nav-scroll {
+          overflow: visible;
+    }
+
+    .navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+          flex-basis: auto;
+    }
+
+   .navbar-toggler {
+      display: none;
+   }
+}

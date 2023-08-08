@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div>
+    {% if messages %}
+       {% for message in messages %}
+          <h2>{{ message }}</h2>
+       {% endfor %}
+    {% endif %}
+</div>
+<div class="container col-sm-6">
+    <a class="home-link" href="{% url 'bank:display' %}">Back to home</a>
+
+</div>
+{% endblock %}
+

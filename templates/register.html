@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>User registration</h1>
+<form action="register" method="post" action="{% url 'bank:register' %}">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter username"><br>
+    <input type="password" name="password" placeholder="Enter password"><br>
+    <input type="password" name="cpassword" placeholder="confirm your password"><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+{% endblock %}
